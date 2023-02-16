@@ -1,0 +1,1035 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-12-22T13:30:52Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-alerts
+    namespace: falcon-dev
+    resourceVersion: "1144243035"
+    uid: 07b7c7f0-f375-4d51-8339-01a62059f04b
+  subsets:
+  - addresses:
+    - ip: 10.0.0.19
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-alerts-c669b58c5-fslgk
+        namespace: falcon-dev
+        resourceVersion: "1144242998"
+        uid: dc08206c-27ca-453a-bcf2-3de20b358bd9     
+    - ip: 10.0.0.193
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-alerts-c669b58c5-fslgk
+        namespace: falcon-dev
+        resourceVersion: "1144242998"
+        uid: dc08206c-27ca-453a-bcf2-3de20b358bd9    
+    - ip: 10.0.0.194
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-alerts-c669b58c5-fslgk
+        namespace: falcon-dev
+        resourceVersion: "1144242998"
+        uid: dc08206c-27ca-453a-bcf2-3de20b358bd9
+    - ip: 10.0.0.20
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-alerts-c669b58c5-2k9hz
+        namespace: falcon-dev
+        resourceVersion: "1144243031"
+        uid: 377d7d7a-df55-47d1-a3b1-075f04fe21f4
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-05-06T05:56:21Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-aris
+    namespace: falcon-dev
+    resourceVersion: "1182601858"
+    uid: 1dc25b14-a2bb-47b9-82c7-bec47d9bd98d
+  subsets:
+  - addresses:
+    - ip: 10.0.0.14
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-aris-57b8bff789-hvx8f
+        namespace: falcon-dev
+        resourceVersion: "1182601855"
+        uid: 468ef87c-8758-4a89-9ffc-c05dccd5735b
+    - ip: 10.0.0.38
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-aris-57b8bff789-w4tck
+        namespace: falcon-dev
+        resourceVersion: "1144242928"
+        uid: 5f994fa1-c725-4eb0-93fa-fafced15d626
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-05-26T04:06:42Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-artifactory-mock-service
+    namespace: falcon-dev
+    resourceVersion: "1182601710"
+    uid: aee93dba-21b5-4625-89ea-dd9054aa53a7
+  subsets:
+  - addresses:
+    - ip: 10.0.0.18
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-artifactory-mock-86d6cfbc7d-fspsh
+        namespace: falcon-dev
+        resourceVersion: "1182601708"
+        uid: 5a6fa183-149d-47e0-a0a2-534574f54f31
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-03-16T16:04:09Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+      host: falcon-clusters-api.devops.poalim.bank
+    name: falcon-artifactory-quota-service
+    namespace: falcon-dev
+    resourceVersion: "1175826228"
+    uid: eda93d02-ca25-46d2-8d75-846e7f49fea0
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-02-27T18:18:15Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-artifactory-service
+    namespace: falcon-dev
+    resourceVersion: "1144243041"
+    uid: a0733f38-077f-4ad5-b249-3a8325c5e836
+  subsets:
+  - addresses:
+    - ip: 10.0.0.39
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-artifactory-6894fcb48-n8fxj
+        namespace: falcon-dev
+        resourceVersion: "1144243040"
+        uid: 14975865-e5db-4beb-93a6-76fc0559575b
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-05-26T03:09:42Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-bitbucket-mock-service
+    namespace: falcon-dev
+    resourceVersion: "470482975"
+    uid: 93c29cdf-dd06-4de8-898f-bcdc028a06a8
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-02-27T18:18:15Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-prod
+    name: falcon-bitbucket-service
+    namespace: falcon-dev
+    resourceVersion: "1182601719"
+    uid: b7c0ccff-a4f6-4eab-85f1-cc9e5a2c50a3
+  subsets:
+  - addresses:
+    - ip: 10.0.0.19
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-bitbucket-7959f77696-57kv8
+        namespace: falcon-dev
+        resourceVersion: "1182601716"
+        uid: a6186d70-6fe2-47ce-b44f-3f047fe00d69
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2022-12-21T08:04:32Z"
+    creationTimestamp: "2021-03-22T11:45:53Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2022-10-25T07:07:32Z"
+    name: falcon-checkmarx
+    namespace: falcon-dev
+    resourceVersion: "1176773502"
+    uid: c7fda397-389c-406e-bf94-dc987e7eda8e
+  subsets:
+  - addresses:
+    - ip: 10.0.0.18
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-checkmarx-6658c89c9d-zqx8g
+        namespace: falcon-dev
+        resourceVersion: "1176773500"
+        uid: 4df1b7e1-ed56-4237-a093-58698bb39e1e
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2022-10-25T07:07:36Z"
+    creationTimestamp: "2021-06-22T08:18:36Z"
+    labels:
+      app: falcon-checkmarx-teams
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2022-10-25T07:07:36Z"
+    name: falcon-checkmarx-teams
+    namespace: falcon-dev
+    resourceVersion: "1120688829"
+    uid: 84bc3f9f-6da8-4dae-9300-b0ba116c8919
+  subsets:
+  - addresses:
+    - ip: 10.0.0.20
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-checkmarx-teams-7dd84c976b-xh5m6
+        namespace: falcon-dev
+        resourceVersion: "1120688826"
+        uid: 0ff5fc5b-842c-4678-9eb9-f90f42835177
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-09-15T07:41:38Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+      host: falcon-clusters-api.devops.poalim.bank
+    name: falcon-clusters
+    namespace: falcon-dev
+    resourceVersion: "1131324235"
+    uid: ffdef3bc-06ac-4c40-b082-2b1b45c0c9e8
+  subsets:
+  - addresses:
+    - ip: 10.0.0.10
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-clusters-7c74ccfd4c-6tkj8
+        namespace: falcon-dev
+        resourceVersion: "1131324233"
+        uid: 2afcd061-09d8-4784-be78-86b320afe351
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2022-10-25T07:07:42Z"
+    creationTimestamp: "2020-08-04T08:46:33Z"
+    labels:
+      app: falcon-clusters-db
+      app.kubernetes.io/instance: falcon-prod
+    name: falcon-clusters-db
+    namespace: falcon-dev
+    resourceVersion: "1120688886"
+    uid: 9ab91b7b-8d39-42f8-87ae-6fe67cc5a4d8
+  subsets:
+  - addresses:
+    - ip: 10.0.0.21
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-clusters-db-59f69bc57b-pc22d
+        namespace: falcon-dev
+        resourceVersion: "1120688883"
+        uid: b9915d01-b931-428d-93c6-73266dc0badf
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-05-25T12:41:01Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-confluence
+    namespace: falcon-dev
+    resourceVersion: "1131324048"
+    uid: fc6c5608-8842-4c13-b0c3-07e4d6e376ec
+  subsets:
+  - addresses:
+    - ip: 10.0.0.9
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-confluence-758ff98c66-rqj2b
+        namespace: falcon-dev
+        resourceVersion: "1131324046"
+        uid: 4ae0f9f3-29ce-4179-a9ee-0808ad69f3e6
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-09-21T15:35:36Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-devops-core
+    namespace: falcon-dev
+    resourceVersion: "1144243172"
+    uid: 4dd2a138-6d08-4e77-800b-eec77ea06a41
+  subsets:
+  - addresses:
+    - ip: 10.0.0.14
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-devops-core-689f496976-2lckc
+        namespace: falcon-dev
+        resourceVersion: "1144243170"
+        uid: 868c8b46-411e-4e31-9ebd-5324eebfb7d0
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2021-02-03T14:54:47Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2022-11-20T18:35:01Z"
+    name: falcon-devops-core-db
+    namespace: falcon-dev
+    resourceVersion: "1144240289"
+    uid: aceb5e72-74f4-4e32-bce9-812e95a70838
+  subsets:
+  - addresses:
+    - ip: 10.0.0.8
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-devops-core-db-6878bd4b96-99gt6
+        namespace: falcon-dev
+        resourceVersion: "1144239720"
+        uid: baf2d4a6-dc2c-4a3e-a44e-598235897e2f
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2021-03-21T08:10:04Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2022-11-06T10:25:03Z"
+    name: falcon-elk
+    namespace: falcon-dev
+    resourceVersion: "1131324411"
+    uid: 36fc08d2-8ad3-4e2c-b735-273cc9f7e109
+  subsets:
+  - addresses:
+    - ip: 10.0.0.8
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-elk-6fff6ccc89-xhh6m
+        namespace: falcon-dev
+        resourceVersion: "1131324408"
+        uid: d053973a-044f-43a4-8c3f-625dd5ae0a93
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2021-03-22T10:54:45Z"
+    labels:
+      app: falcon-elk-test
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-02-04T05:37:22Z"
+    name: falcon-elk-test
+    namespace: falcon-dev
+    resourceVersion: "1227898561"
+    uid: d1c9034a-4a91-4d26-ab0d-0e3d69c156ba
+  subsets:
+  - notReadyAddresses:
+    - ip: 10.0.0.8
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-elk-test-9496c5686-7ld64
+        namespace: falcon-dev
+        resourceVersion: "1227895964"
+        uid: 252d0ea2-25e2-4aee-b9a8-78b08685e670
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-02-20T17:49:46Z"
+    labels:
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-gateway-service
+    namespace: falcon-dev
+    resourceVersion: "890712074"
+    uid: 37feb6e3-83be-4984-ab4d-916d27485ff5
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2021-02-10T09:36:01Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2022-11-20T18:37:10Z"
+    name: falcon-grafana-ds-service
+    namespace: falcon-dev
+    resourceVersion: "1144243113"
+    uid: ee11923e-f898-4275-a04e-5e7416446917
+  subsets:
+  - addresses:
+    - ip: 10.0.0.17
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-grafana-ds-6df749f686-zz27d
+        namespace: falcon-dev
+        resourceVersion: "1144243112"
+        uid: 01becd7a-5d58-472f-9b4f-70c41aede6f0
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-11-11T10:02:00Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-prod
+    name: falcon-grafana-service
+    namespace: falcon-dev
+    resourceVersion: "1144241145"
+    uid: 72bc10eb-74b5-45d2-acf6-995b2ca43f55
+  subsets:
+  - addresses:
+    - ip: 10.0.0.13
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-grafana-7bfd7654f6-m8q5m
+        namespace: falcon-dev
+        resourceVersion: "1144241142"
+        uid: e98a65f7-f66d-4551-a4bd-2fc5c7e63b99
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-08-20T15:14:58Z"
+    labels:
+      app: falcon-infra-gate
+      app.kubernetes.io/instance: falcon-prod
+    name: falcon-infra-gate
+    namespace: falcon-dev
+    resourceVersion: "1144242986"
+    uid: d9f2f770-078c-48e0-8a38-49ef1119ca47
+  subsets:
+  - addresses:
+    - ip: 10.0.0.32
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-infra-gate-7bcfcd788c-5v8wp
+        namespace: falcon-dev
+        resourceVersion: "1144242983"
+        uid: 20c74363-b0c7-437e-8cf4-53973cab09ee
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-02-27T18:18:15Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-jenkins-service
+    namespace: falcon-dev
+    resourceVersion: "350443623"
+    uid: 6e3decb3-a9b2-4319-884d-aa0181d70154
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2022-10-25T07:07:46Z"
+    creationTimestamp: "2020-05-25T12:41:01Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-jira
+    namespace: falcon-dev
+    resourceVersion: "1120688946"
+    uid: 6124b0d4-ce56-4883-9fd5-458441738ce7
+  subsets:
+  - addresses:
+    - ip: 10.0.0.24
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-jira-774b94bd4c-7qstz
+        namespace: falcon-dev
+        resourceVersion: "1120688945"
+        uid: bdfd6811-fa05-48a4-850c-ac480210a07e
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-08-17T04:54:05Z"
+    labels:
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-jwks-service
+    namespace: falcon-dev
+    resourceVersion: "1131324445"
+    uid: b4a48271-3788-4242-bfd7-280b9cffc412
+  subsets:
+  - addresses:
+    - ip: 10.0.0.28
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-jwks-74d4d94c67-jtkzc
+        namespace: falcon-dev
+        resourceVersion: "1131324441"
+        uid: 664089f2-4c14-4ee8-93fc-8cdee81fd592
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2021-04-27T09:55:53Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2022-11-20T18:35:21Z"
+    name: falcon-keshet
+    namespace: falcon-dev
+    resourceVersion: "1144241277"
+    uid: 203e3ebf-1b2a-4c2b-9f69-2fce883a5bc5
+  subsets:
+  - addresses:
+    - ip: 10.0.0.12
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-keshet-6d6cfb7565-fzz9m
+        namespace: falcon-dev
+        resourceVersion: "1144241274"
+        uid: 5bb56d86-fcdb-46b4-a40c-a4e20d673fbd
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2021-01-06T13:53:51Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-ldap
+    namespace: falcon-dev
+    resourceVersion: "1131324473"
+    uid: 190f8375-f209-4926-a1d8-ba8a90162a96
+  subsets:
+  - addresses:
+    - ip: 10.0.0.32
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-ldap-6d6cf4c4ff-6w7w2
+        namespace: falcon-dev
+        resourceVersion: "1131324468"
+        uid: b0aaf178-269b-4732-8c9d-6d5f96da0211
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-08-26T13:10:18Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-mattermost
+    namespace: falcon-dev
+    resourceVersion: "1131324556"
+    uid: 6a9a978d-169a-4ef1-b9f1-25bef811c2c5
+  subsets:
+  - addresses:
+    - ip: 10.0.0.34
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-mattermost-7d8f8cdd8f-w9vxt
+        namespace: falcon-dev
+        resourceVersion: "1131324552"
+        uid: 9bdd02e0-cbf9-4aed-9f35-d574ab6cb45f
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-02-27T18:18:15Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-ocp-service
+    namespace: falcon-dev
+    resourceVersion: "1144240325"
+    uid: 3f35d2f4-de83-4a1e-8ff0-b7a5a3023e72
+  subsets:
+  - addresses:
+    - ip: 10.0.0.2
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-ocp-fb5db569f-hdhl7
+        namespace: falcon-dev
+        resourceVersion: "1144240177"
+        uid: d0a9fb42-a995-4c4c-9e57-b9c4eaea414c
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-16T16:42:02Z"
+    creationTimestamp: "2021-01-21T17:14:35Z"
+    labels:
+      app: falcon-postgrest
+      app.kubernetes.io/instance: falcon-prod
+    name: falcon-postgrest
+    namespace: falcon-dev
+    resourceVersion: "1205817397"
+    uid: 13860efb-3966-4102-be46-8a24dcd0dce3
+  subsets:
+  - addresses:
+    - ip: 10.0.0.10
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-postgrest-7968fb4c8b-cnmpt
+        namespace: falcon-dev
+        resourceVersion: "1205817396"
+        uid: 61bc2e67-073a-44be-95ea-cae5427ea002
+    ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-10-12T06:55:57Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-pricing-service
+    namespace: falcon-dev
+    resourceVersion: "1131324095"
+    uid: 10158ee3-998f-4cf6-a84b-d53ffe6103c7
+  subsets:
+  - addresses:
+    - ip: 10.0.0.19
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-pricing-84f9464b76-lbz6m
+        namespace: falcon-dev
+        resourceVersion: "1131324092"
+        uid: 6818eddc-e00c-41e2-b4d9-1ac9c4f0ea24
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-09-23T11:25:56Z"
+    labels:
+      app: falcon-quota
+      app.kubernetes.io/instance: falcon-prod
+    name: falcon-quota
+    namespace: falcon-dev
+    resourceVersion: "1144243179"
+    uid: 5d4f6d0b-8b30-4b1e-9122-ff924001d402
+  subsets:
+  - addresses:
+    - ip: 10.0.0.31
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-quota-9c446c8d9-8nrbr
+        namespace: falcon-dev
+        resourceVersion: "1144243177"
+        uid: 99265330-eabd-4c9f-9036-5dc34db52f17
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2021-05-13T05:02:37Z"
+    labels:
+      app: falcon-sendmail
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2022-11-20T18:37:02Z"
+    name: falcon-sendmail
+    namespace: falcon-dev
+    resourceVersion: "1144242876"
+    uid: 1618f726-e3d2-4e4e-9462-aba11a00cf90
+  subsets:
+  - addresses:
+    - ip: 10.0.0.12
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-sendmail-svc-87d958f79-84wp7
+        namespace: falcon-dev
+        resourceVersion: "1144242874"
+        uid: b6ece218-601f-4ca6-aabb-4868f693282c
+    - ip: 10.0.0.16
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-sendmail-svc-87d958f79-9qzx8
+        namespace: falcon-dev
+        resourceVersion: "1131324396"
+        uid: 8e502efd-b7fd-4076-98a7-966e4384ca29
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2020-03-25T14:38:22Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    name: falcon-service-catalog
+    namespace: falcon-dev
+    resourceVersion: "1144242853"
+    uid: b2fa5571-0839-489f-b81a-1cbb41825840
+  subsets:
+  - addresses:
+    - ip: 10.0.0.34
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-service-catalog-84dbd4566f-9m9zl
+        namespace: falcon-dev
+        resourceVersion: "1144242851"
+        uid: 9d2711f9-bb1e-4c74-bae6-e8c93957ab46
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2022-10-25T07:06:54Z"
+    creationTimestamp: "2021-03-11T10:47:20Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2022-10-25T07:07:07Z"
+    name: falcon-sonarqube
+    namespace: falcon-dev
+    resourceVersion: "1120688490"
+    uid: 6931a320-cfbf-4497-80cd-f31bccb357ff
+  subsets:
+  - addresses:
+    - ip: 10.0.0.25
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-sonarqube-7dfd655f9f-jrcv9
+        namespace: falcon-dev
+        resourceVersion: "1120688487"
+        uid: 3be2cec1-7511-4363-9fc0-f85222f0bd28
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2021-05-12T10:22:36Z"
+    labels:
+      app: falcon-sql-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2022-11-20T18:35:14Z"
+    name: falcon-sql-exporter
+    namespace: falcon-dev
+    resourceVersion: "1144241055"
+    uid: d3a9fba3-dcb7-4b22-8fda-e6f42aa8b66a
+  subsets:
+  - addresses:
+    - ip: 10.0.0.17
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-sql-exporter-d864c6fd4-slk5x
+        namespace: falcon-dev
+        resourceVersion: "1144241050"
+        uid: deef2f31-2e1a-46e9-b1f0-57a54ab8b7ef
+    ports:
+    - name: http
+      port: 9399
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-01-26T14:12:57Z"
+    creationTimestamp: "2021-04-13T07:12:58Z"
+    labels:
+      app: falcon-exporter
+      app.kubernetes.io/instance: falcon-gateway
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/instance: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-01-26T14:12:57Z"
+    name: falcon-synthetic
+    namespace: falcon-dev
+    resourceVersion: "1216478326"
+    uid: c1f08f77-bbe5-47a1-903b-440795079c4d
+  subsets:
+  - addresses:
+    - ip: 10.0.0.11
+      nodeName: NodeName
+      targetRef:
+        kind: Pod
+        name: falcon-synthetic-795b5bcf7b-4ch2t
+        namespace: falcon-dev
+        resourceVersion: "1216478323"
+        uid: 9170df94-6e25-41b3-9d01-6d8a78754101
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
+
+
+
