@@ -1,0 +1,57 @@
+Dockerfile
+FROM docker-external.repo.devops.poalim.bank/python:3.9 
+# Or any preferred Python version.
+LABEL Author="Tomer Aharoni"
+LABEL Description="use for sre team in term of monitoring hcp availability"
+ADD main.py .
+
+# Set Artifactory As Private Regsitry 
+COPY pip.ini pip.conf
+ENV PIP_CONFIG_FILE pip.conf
+RUN pip install requests beautifulsoup4 python-dotenv
+
+CMD ["python", "./main.py"] 
+# Or enter the name of your unique directory and parameter set.
+
+main.py
+import os
+for k,v in os.environ.items():
+ print(k,v)
+ 
+ pip.ini
+ [global]
+index_url = https://artifactory_url/artifactory/api/pypi/python-repo/simple
+trusted_host = artifactory_url
+
+[easy_install]
+allow_hosts = artifactory_url
+find_links = https://artifactory_url/artifactory/api/pypi/python-repo/simple
+
+cm.yaml
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: appconfig 
+data:
+  channel: mychannel
+  slackConfig: | 
+    {"webhook":"https://hooks.slack.com/services/T00/B000/XXX"}
+    
+pod.yaml
+kind: Pod 
+apiVersion: v1 
+metadata:
+  name: sre-docker-hcp
+spec:
+  containers:
+    - name: sre-docker-hcp
+      image: sre-docker-hcp:0.2
+      env:
+      - name: LOG_LEVEL
+        value: info
+      - name: LOGGER_LOCATION
+        value: '/tmp/'
+      # command: ["bash","-c","sleep 1000000"]
+      envFrom:
+        - configMapRef:
+            name: appconfig
