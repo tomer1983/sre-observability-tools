@@ -1,0 +1,4 @@
+prometheus-client
+botocore
+boto3
+urllib3

@@ -1,0 +1,17 @@
+kind: Pod 
+apiVersion: v1 
+metadata:
+  name: sre-docker-hcp
+spec:
+  containers:
+    - name: sre-docker-hcp
+      image: sre-docker-hcp:0.2
+      env:
+      - name: LOG_LEVEL
+        value: info
+      - name: LOGGER_LOCATION
+        value: '/tmp/'
+      # command: ["bash","-c","sleep 1000000"]
+      envFrom:
+        - configMapRef:
+            name: appconfig
