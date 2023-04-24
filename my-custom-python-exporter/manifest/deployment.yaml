@@ -1,0 +1,102 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: __PROJECT_NAME__
+  namespace: cloud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: __PROJECT_NAME__
+  template:
+    metadata:
+      labels:
+        app: __PROJECT_NAME__
+    spec:
+      containers:
+        - name: __PROJECT_NAME__
+          image: docker-external.repo.devops.poalim.bank/sre-tools/__PROJECT_NAME__:__PROJECT_TAG__
+          imagePullPolicy: Always
+          env:
+          - name: LOG_LEVEL
+            value: info
+          - name: LOGGER_LOCATION
+            value: '/tmp/'
+          # command: ["bash","-c","sleep 1000000"]
+          envFrom:
+            - configMapRef:
+                name: appconfig          
+          livenessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            httpGet:
+              path: /
+              port: 5000
+            timeoutSeconds: 1
+          readinessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            httpGet:
+              path: /
+              port: 5000
+            timeoutSeconds: 1
+          ports:
+          - containerPort: 5000
+          resources:
+            limits:
+              cpu: 1
+              memory: 3Gi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: __PROJECT_NAME__-srv
+  namespace: cloud
+  labels:
+    app: __PROJECT_NAME__
+spec:
+  type: ClusterIP
+  selector:
+    app: __PROJECT_NAME__
+  ports:
+  - name: app
+    port: 5000
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    app.kubernetes.io/instance: __PROJECT_NAME__
+    k8s-app: __PROJECT_NAME__
+  name: __PROJECT_NAME__
+  namespace: openshift-monitoring
+spec:
+  endpoints:
+    - interval: 30s
+      port: app
+  namespaceSelector:
+    matchNames:
+      - cloud
+  selector:
+    matchLabels:
+      app: __PROJECT_NAME__
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: __PROJECT_NAME__
+  namespace: cloud
+spec:
+  to:
+    kind: Service
+    name: __PROJECT_NAME__-srv
+  port:
+    targetPort: app    
+  tls:
+    termination: edge
