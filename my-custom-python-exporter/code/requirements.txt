@@ -1,4 +1,7 @@
+setuptools
 prometheus-client
 botocore
+xmltodict
 boto3
 urllib3
+requests
