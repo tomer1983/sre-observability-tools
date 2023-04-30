@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: __PROJECT_NAME__
-          image: docker-external.repo.devops.poalim.bank/sre-tools/__PROJECT_NAME__:__PROJECT_TAG__
+          image: tomer1983/sre-tools/__PROJECT_NAME__:__PROJECT_TAG__
           imagePullPolicy: Always
           env:
           - name: LOG_LEVEL

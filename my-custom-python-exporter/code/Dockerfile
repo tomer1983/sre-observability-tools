@@ -10,7 +10,8 @@ LABEL Description="use for sre team in term of monitoring hcp availability"
 ADD main.py .
 COPY . .
 RUN pip install --upgrade pip
-RUN pip install -r /root/requirements.txt --trusted-host artifactory.resource.bank
+# RUN pip install -r /root/requirements.txt --trusted-host artifactory.domain.com
+RUN pip install -r /root/requirements.txt 
 EXPOSE  5000
 
 CMD ["python", "./main.py", "-p 5000"]

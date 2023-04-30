@@ -114,7 +114,7 @@ items:
     labels:
       app: falcon-exporter
       app.kubernetes.io/instance: falcon-gateway
-      host: falcon-clusters-api.devops.poalim.bank
+      host: falcon-clusters-api.devops.company.com
     name: falcon-artifactory-quota-service
     namespace: falcon-dev
     resourceVersion: "1175826228"
@@ -269,15 +269,12 @@ items:
 - apiVersion: v1
   kind: Endpoints
   metadata:
-    creationTimestamp: "2020-09-15T07:41:38Z"
     labels:
       app: falcon-exporter
       app.kubernetes.io/instance: falcon-gateway
-      host: falcon-clusters-api.devops.poalim.bank
+      host: falcon-clusters-api.devops.company.com
     name: falcon-clusters
     namespace: falcon-dev
-    resourceVersion: "1131324235"
-    uid: ffdef3bc-06ac-4c40-b082-2b1b45c0c9e8
   subsets:
   - addresses:
     - ip: 10.0.0.10

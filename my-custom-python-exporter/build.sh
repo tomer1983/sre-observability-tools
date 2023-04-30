@@ -3,7 +3,7 @@ set -e
 PROJECT_NAME='sre-hcp-exporter'
 PROJECT_TAG='v0.1'
 RANDOM=$(echo $RANDOM)
-
+REPO_URL='tomer1983/sre-tools/'
 
 # mkdir -p code/dependencies
 # pip3 download -r code/requirements.txt -d "code/dependencies" 
@@ -14,20 +14,20 @@ RANDOM=$(echo $RANDOM)
 echo -e "PROJECT: $PROJECT_NAME:$PROJECT_TAG hash:$RANDOM"
 
 # #login to artifactory
-#docker login -u <user> <repor_url> -p <pass>
+#docker login -u <user> REPO_URL -p <pass>
 
 # #build the image
 docker build --force-rm -t $PROJECT_NAME:$PROJECT_TAG code/.
 
 
 # # This command tags the Docker image with the given project name and tag, and specifies the destination registry and repository where the image should be stored.
-docker tag $PROJECT_NAME:$PROJECT_TAG <repor_url>/sre-tools/$PROJECT_NAME:$PROJECT_TAG
+docker tag $PROJECT_NAME:$PROJECT_TAG REPO_URL/sre-tools/$PROJECT_NAME:$PROJECT_TAG
 
 # # This command pushes the Docker image to the specified destination registry and repository.
-docker push <repor_url>/sre-tools/$PROJECT_NAME:$PROJECT_TAG
+docker push REPO_URL/sre-tools/$PROJECT_NAME:$PROJECT_TAG
 
 # # This command displays a message to indicate that the image has been successfully pushed to the destination repository and registry.
-echo -e "DONE - image pushed to <repor_url>/sre-tools/$PROJECT_NAME:$PROJECT_TAG"
+echo -e "DONE - image pushed to REPO_URL/sre-tools/$PROJECT_NAME:$PROJECT_TAG"
 
 # # building a kuberntes.yaml file with the right arguments
 sed "s/__PROJECT_NAME__/$PROJECT_NAME/g" manifest/kubernetes.templete.yaml > manifest/kubernetes.yaml
