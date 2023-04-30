@@ -14,8 +14,8 @@ REPO_URL='tomer1983/sre-tools/'
 echo -e "PROJECT: $PROJECT_NAME:$PROJECT_TAG hash:$RANDOM"
 
 # #login to artifactory
-#docker login -u <user> REPO_URL -p <pass>
-
+docker login -u tomer1983 -p $PASS
+exit
 # #build the image
 docker build --force-rm -t $PROJECT_NAME:$PROJECT_TAG code/.
 
